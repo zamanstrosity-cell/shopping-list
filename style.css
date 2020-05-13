@@ -130,13 +130,18 @@
       vertical-align: middle;
   }
 
-  .product-img{
-      width:40px;
+  .total{
+      text-align: right;
+      width:100%;
   }
 
-  .total-container{
-      float:right;
-      margin-right:10px;
+  .total-amount{
+      text-align: center;
+  }
+
+
+  .product-img{
+      width:40px;
   }
 
   .close{
