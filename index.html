@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,115 +10,43 @@
     <script src="https://kit.fontawesome.com/8e94254121.js" crossorigin="anonymous"></script>
     <title>Shopping List</title>
 </head>
+
 <body>
     <nav class="navbar">
         <div class="nav-item">Shop</div>
         <ul class="nav-item">
-            <li><i class="fas fa-shopping-cart" id="cart"></i></li>
+            <li><i class="fas fa-shopping-cart cart"></i></li>
         </ul>
     </nav>
     <div class="items-container">
-        <div class="item">
-            <div class="image-container">
-                <img src="./images/headphones.jpg" alt="">
-            </div>
-            <div class="text-container">
-                <h3>Headphones</h3>
-            <h4>$25.90<h4>
-            <i class="fas fa-cart-plus add-cart" id="cart"></i>
-            </div>
-        </div>
-        <div class="item">
-            <div class="image-container">
-                <img src="./images/microphone.jpg" alt="">
-            </div>
-            <div class="text-container">
-                <h3>Microphone</h3>
-            <h4>$20.00<h4>
-            <i class="fas fa-cart-plus add-cart" id="cart"></i>
-            </div>
-        </div>
-        <div class="item">
-            <div class="image-container">
-                <img src="./images/speakers.png" alt="">
-            </div>
-            <div class="text-container">
-                <h3>Speakers</h3>
-            <h4>$30.00<h4>
-            <i class="fas fa-cart-plus add-cart" id="cart"></i>
-            </div>
-        </div>
-        <div class="item">
-            <div class="image-container">
-                <img src="./images/laptop.jpg" alt="">
-            </div>
-            <div class="text-container">
-                <h3>Laptop</h3>
-            <h4>$100.99<h4>
-            <i class="fas fa-cart-plus add-cart" id="cart"></i>
-            </div>
-        </div>
-        <div class="item">
-            <div class="image-container">
-                <img src="./images/headphones.jpg" alt="">
-            </div>
-            <div class="text-container">
-                <h3>Headphones</h3>
-            <h4>$28.40<h4>
-            <i class="fas fa-cart-plus add-cart" id="cart"></i>
-            </div>
-        </div>
-        <div class="item">
-            <div class="image-container">
-                <img src="./images/headphones.jpg" alt="">
-            </div>
-            <div class="text-container">
-                <h3>Headphones</h3>
-            <h4>$23.90<h4>
-            <i class="fas fa-cart-plus add-cart" id="cart"></i>
-            </div>
-        </div>
-        <div class="item">
-            <div class="image-container">
-                <img src="./images/headphones.jpg" alt="">
-            </div>
-            <div class="text-container">
-                <h3>Headphones</h3>
-            <h4>$25.90<h4>
-            <i class="fas fa-cart-plus add-cart" id="cart"></i>
-            </div>
-        </div>
-        <div class="item">
-            <div class="image-container">
-                <img src="./images/headphones.jpg" alt="">
-            </div>
-            <div class="text-container">
-                <h3>Headphones</h3>
-            <h4>$25.90<h4>
-            <i class="fas fa-cart-plus add-cart" id="cart"></i>
-            </div>
-        </div>
-        <div class="item">
-            <div class="image-container">
-                <img src="./images/laptop.jpg" alt="">
-            </div>
-            <div class="text-container">
-                <h3>Laptop</h3>
-            <h4>$100.99<h4>
-            <i class="fas fa-cart-plus add-cart" id="cart"></i>
-            </div>
-        </div>
-        <div class="item">
-            <div class="image-container">
-                <img src="./images/speakers.png" alt="">
-            </div>
-            <div class="text-container">
-                <h3>Speakers</h3>
-            <h4>$30.00<h4>
-            <i class="fas fa-cart-plus add-cart" id="cart"></i>
+    </div>
+    <div class="cart-modal">
+        <div class="cart-modal-content">
+            <h1>Your Cart:</h1>
+            <span class="close">&times;</span>
+            <div class="cart-contents">
+                <table class="cart-table">
+                    <tr class="row">
+                        <th class="cell">Image</th>
+                        <th class="cell">Name</th>
+                        <th class="cell">Quantity</th>
+                        <th class="cell">Price</th>
+                        <th class="cell">Remove</th>
+                    </tr>
+                    <tr class="row">
+                        <th class="cell"><img class='product-img'src="/images/headphones.jpg" alt=""></th>
+                        <th class="cell">Headphones</th>
+                        <th class="cell">1</th>
+                        <th class="cell">99.50</th>
+                        <th class="cell remove-btn">&times</th>
+                    </tr>
+                </table>
+                <div class="total-container">Total:<p class="total">$456.00</p>
+                </div>
             </div>
         </div>
     </div>
-    <div class="cart"></div>
+
 </body>
+
 </html>
