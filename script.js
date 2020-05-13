@@ -24,10 +24,10 @@ function addNewItem(name, price, imageSource) {
     inventory.push(newItem(name, price, imageSource))
 }
 
-addNewItem('headphones', 30, './images/headphones.jpg');
-addNewItem('Speakers', 32, './images/speakers.png');
+addNewItem('headphones', 30.99, './images/headphones.jpg');
+addNewItem('Speakers', 32.99, './images/speakers.png');
 addNewItem('Microphone', 56.99, './images/microphone.jpg');
-addNewItem('Laptop', 32, './images/laptop.jpg');
+addNewItem('Laptop', 32.99, './images/laptop.jpg');
 
 
 // code for modal
@@ -74,7 +74,8 @@ const cartModal = (() => {
             inCart.forEach(item => {
                 total += item.getPrice();
             });
-            totalSel.innerHTML = total;
+            
+            totalSel.innerHTML = (Math.round(total * 100) / 100).toFixed(2);
         }
     }
 
