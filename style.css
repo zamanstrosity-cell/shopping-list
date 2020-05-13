@@ -12,7 +12,7 @@
     z-index: 99;
 }
 .nav-item{
-    padding:10px;
+    padding:30px;
 }
 
 .cart:hover {
@@ -24,6 +24,7 @@
     display:flex;
     flex-flow:row wrap;
     width: 90%;
+    max-width: 1000px;
     justify-content: center;
     overflow: auto;
     margin: auto;
@@ -43,6 +44,7 @@
     justify-content:space-between;
     margin: 10px;
     transition: all 0.2s ease-in-out;
+    overflow: hidden;
 }
 
 .item:hover{
@@ -105,6 +107,7 @@
       align-items: center;
       height: 500px;
       width:80%;
+      max-width: 700px;;
       overflow: auto;
       background-color:white;
       position: relative;
@@ -132,7 +135,8 @@
 
   .total{
       text-align: right;
-      width:100%;
+      width:80%;
+      margin: 0 auto;
   }
 
   .total-amount{
@@ -154,6 +158,7 @@
 
   .remove-btn{
       font-size: 30px;
+      cursor: pointer;
   }
   
  
