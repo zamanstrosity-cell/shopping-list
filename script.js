@@ -33,29 +33,20 @@ addNewItem('Laptop', 32.99, './images/laptop.jpg');
 // code for modal
 
 const cartModal = (() => {
+    
     //query selectors for modal
     var modalSel = document.querySelector(".cart-modal")
     var cartBtn = document.querySelector(".cart")
     var closeModalBtn = document.querySelector(".close");
     var totalSel = document.querySelector('#total-amount');
 
+
+    // current cart items
     const inCart = [];
 
 
-    cartBtn.onclick = function () {
-        modalSel.style.display = "flex";
-    }
 
-    closeModalBtn.onclick = function () {
-        modalSel.style.display = "none";
-    }
-
-    window.onclick = function (event) {
-        if (event.target == modalSel) {
-            modalSel.style.display = "none";
-        }
-    }
-
+    // add a new item to the cart
     const addToCart = (event) => {
         var name = event.target.id;
         var item = inventory.filter(item => item.getName() === name)[0]
@@ -64,21 +55,35 @@ const cartModal = (() => {
         updateTotal();
     }
 
+
+    // remove an item from the car at specific index
+    const removeFromCartIndex = (name) => {
+        for (var i = 0; i < inCart.length; i++) {
+            if (inCart[i].getName() === name) {
+                return inCart.splice(i, 1);
+            }
+        }
+    }
+
+
+    // update the total of all items in cart 
     const updateTotal = () => {
         if (inCart.length === 1) {
             return totalSel.innerHTML = inCart[0].getPrice();
         } else if (inCart.length === 0) {
-            return totalSel.innerHTML = 0;
+            return totalSel.innerHTML = '0.00';
         } else {
             var total = 0;
             inCart.forEach(item => {
                 total += item.getPrice();
             });
-            
+
             totalSel.innerHTML = (Math.round(total * 100) / 100).toFixed(2);
         }
     }
 
+
+    // render the new items in cart when they are added
     const renderItemCart = (item) => {
         let name = item.getName();
         let price = item.getPrice();
@@ -102,11 +107,20 @@ const cartModal = (() => {
 
     }
 
-    const removeFromCartIndex = (name) => {
-        for (var i = 0; i < inCart.length; i++) {
-            if (inCart[i].getName() === name) {
-                return inCart.splice(i, 1);
-            }
+
+    // event listeners to control display of cart modal
+
+    cartBtn.onclick = function () {
+        modalSel.style.display = "flex";
+    }
+
+    closeModalBtn.onclick = function () {
+        modalSel.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+        if (event.target == modalSel) {
+            modalSel.style.display = "none";
         }
     }
 
