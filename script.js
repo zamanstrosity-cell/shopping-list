@@ -1,7 +1,6 @@
 //Query Selectors
 const shop = document.querySelector(".items-container");
 
-
 //Classes and Objects
 
 let inventory = [];
@@ -39,7 +38,18 @@ addNewItem('Alexa', 98.99, './images/alexa.jpg');
 // code for modal
 
 const cartModal = (() => {
+   
+    // current cart items
+    const inCart = [];
     
+   
+    // item count for cart
+    const itemCount = document.querySelector(".item-count");
+    itemCount.innerHTML = `${inCart.length} items`
+     
+    const updateItemCount = () => {
+        itemCount.innerHTML = `${inCart.length} items`
+    }
     //query selectors for modal
     var modalSel = document.querySelector(".cart-modal")
     var cartBtn = document.querySelector(".cart")
@@ -47,8 +57,7 @@ const cartModal = (() => {
     var totalSel = document.querySelector('#total-amount');
 
 
-    // current cart items
-    const inCart = [];
+
 
 
 
@@ -66,9 +75,11 @@ const cartModal = (() => {
     const removeFromCartIndex = (name) => {
         for (var i = 0; i < inCart.length; i++) {
             if (inCart[i].getName() === name) {
-                return inCart.splice(i, 1);
+                inCart.splice(i, 1);
+                updateItemCount();
             }
         }
+        
     }
 
 
@@ -110,6 +121,7 @@ const cartModal = (() => {
             e.target.parentNode.remove();
         })
         document.querySelector('.cart-table').appendChild(newRow)
+        updateItemCount();
 
     }
 
@@ -130,7 +142,7 @@ const cartModal = (() => {
         }
     }
 
-    return { addToCart }
+    return { updateItemCount, addToCart }
 })()
 
 
