@@ -25,9 +25,15 @@ function addNewItem(name, price, imageSource) {
 }
 
 addNewItem('headphones', 30.99, './images/headphones.jpg');
-addNewItem('Speakers', 32.99, './images/speakers.png');
+addNewItem('Speakers', 59.99, './images/speakers.png');
 addNewItem('Microphone', 56.99, './images/microphone.jpg');
-addNewItem('Laptop', 32.99, './images/laptop.jpg');
+addNewItem('Laptop', 599.99, './images/laptop.jpg');
+addNewItem('ChromeCast', 32.99, './images/chromeCast.jpg');
+addNewItem('Camera', 399.99, './images/camera.jpg');
+addNewItem('Turn-Table', 299.99, './images/turn-table.jpg');
+addNewItem('Television', 899.99, './images/television.jpg');
+addNewItem('FireStick', 32.99, './images/fireStick.jpg');
+addNewItem('Alexa', 98.99, './images/alexa.jpg');
 
 
 // code for modal
