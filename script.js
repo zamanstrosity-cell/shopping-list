@@ -71,7 +71,7 @@ const cartModal = (() => {
     }
 
 
-    // remove an item from the car at specific index
+    // remove an item from the car at specific index and update item count in cart
     const removeFromCartIndex = (name) => {
         for (var i = 0; i < inCart.length; i++) {
             if (inCart[i].getName() === name) {
