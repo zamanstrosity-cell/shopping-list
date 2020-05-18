@@ -135,10 +135,13 @@ const cartModal = (() => {
             let innerHtml = `
         <td class="cell"><img class='product-img' src=".${img}" alt=""></td>
         <td class="cell">${name}</td>
-        <td class="cell quantity-cell">${quantity}
+        <td class="cell quantity-cell">
+        <div class="quantity-container"> 
+        ${quantity}
         <div id="icons">
         <i class="arrow up increase"></i>
         <i class="arrow down decrease"></i>
+        </div>
         </div>
         </td>
         <td class="cell">${price}</td>

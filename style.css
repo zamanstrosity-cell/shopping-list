@@ -133,9 +133,15 @@
       vertical-align: middle;
   }
 
-.quantity-cell {
+
+.quantity-container{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+}
+.quantity-cell div{
+    display: flex;
+    height: 100%;
 }
 
 #icons {
